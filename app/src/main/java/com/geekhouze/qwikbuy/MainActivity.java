@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 //                .setFontAttrId(R.attr.fontPath)
 //                .build()
 //        );
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
