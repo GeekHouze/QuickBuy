@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/btn_sign_in_background"
             android:text="SIGN IN"
-            android:textColor="@color/white" />
+            android:textColor="@color/DarkCyan" />
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
@@ -69,7 +69,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/btn_register_background"
             android:text="REGISTER"
-            android:textColor="@color/btnRegister" />
+            android:textColor="@color/White" />
 
         <TextView
             android:layout_width="match_parent"
