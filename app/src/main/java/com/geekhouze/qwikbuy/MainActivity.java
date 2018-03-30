@@ -23,17 +23,15 @@ public class MainActivity extends AppCompatActivity {
 //                .build()
 //        );
         setContentView(R.layout.activity_login);
+//
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setTitle("");
+//            getSupportActionBar().setHomeButtonEnabled(true);
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        }
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("");
-            getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-        System.out.print("hello world");
-        System.out.print("Added by Geoff");
-        String name = "Geoff";
     }
 }
