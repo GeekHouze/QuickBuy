@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 //                .setFontAttrId(R.attr.fontPath)
 //                .build()
 //        );
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -32,5 +32,6 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setHomeButtonEnabled(true);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        System.out.print("hello world");
     }
 }
