@@ -34,5 +34,6 @@ public class MainActivity extends AppCompatActivity {
         }
         System.out.print("hello world");
         System.out.print("Added by Geoff");
+        String name = "Geoff";
     }
 }
