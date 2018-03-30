@@ -17,21 +17,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-//                .setDefaultFontPath("fonts/Arkhip_font.ttf")
-//                .setFontAttrId(R.attr.fontPath)
-//                .build()
-//        );
+
         setContentView(R.layout.activity_login);
-//
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().setTitle("");
-//            getSupportActionBar().setHomeButtonEnabled(true);
-//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        }
 
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/DarkCyan"/>
+    <item android:drawable="@color/colorPrimary"/>
     <item>
         <bitmap android:src="@drawable/happy" android:gravity="center" android:alpha="0.1"/>
     </item>
