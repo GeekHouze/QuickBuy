@@ -19,9 +19,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <!--<item name="android:textSize">24sp</item>-->
         <item name="android:actionBarTabStyle">@color/colorAccent</item>
-
-
     </style>
+
 
     <style name="TransparentBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:windowActionBarOverlay">true</item>
