@@ -51,8 +51,8 @@ dependencies {
 
     implementation "com.mikhaellopez:circularimageview:$circularimageview"
 
-    compile "uk.co.chrisjenx:calligraphy:$calligraphy"
-    compile "com.rengwuxian.materialedittext:library:$rengwuxian"
+    implementation "uk.co.chrisjenx:calligraphy:$calligraphy"
+    implementation "com.rengwuxian.materialedittext:library:$rengwuxian"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
