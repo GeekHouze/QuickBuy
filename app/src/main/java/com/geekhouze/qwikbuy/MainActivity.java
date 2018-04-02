@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.flcontent, mFragment).commit();
         menuItem.setChecked(true);
