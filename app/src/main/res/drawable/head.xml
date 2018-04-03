@@ -5,4 +5,5 @@
         <bitmap android:src="@drawable/banner" android:gravity="fill" android:alpha="0.8"/>
     </item>
 
+
 </layer-list>
