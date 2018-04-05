@@ -78,6 +78,7 @@ public class DecodeBitmapTask extends AsyncTask<Void, Void, Bitmap> {
             return null;
         }
 
+
         options.inSampleSize = inSampleSize;
         options.inJustDecodeBounds = false;
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
