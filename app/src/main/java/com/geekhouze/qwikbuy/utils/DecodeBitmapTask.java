@@ -34,6 +34,7 @@ public class DecodeBitmapTask extends AsyncTask<Void, Void, Bitmap> {
         void onPostExecuted(Bitmap bitmap);
     }
 
+
     public DecodeBitmapTask(Resources resources, @DrawableRes int bitmapResId,
                             int reqWidth, int reqHeight,
                             @NonNull Listener listener)
