@@ -47,6 +47,7 @@ public class DecodeBitmapTask extends AsyncTask<Void, Void, Bitmap> {
         this.refListener = new WeakReference<>(listener);
     }
 
+
     @Override
     protected Bitmap doInBackground(Void... voids) {
         Bitmap cachedBitmap = cache.getBitmapFromBgMemCache(bitmapResId);
