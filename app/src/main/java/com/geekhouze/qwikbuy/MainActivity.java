@@ -1,8 +1,8 @@
 package com.geekhouze.qwikbuy;
 
 import android.content.Context;
-import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,7 +11,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+
+
+import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -26,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        mToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.open,R.string.close);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
-        NavigationView navigationViewDrawer = (NavigationView) findViewById(R.id.navigationViewDrawer) ;
+        NavigationView navigationViewDrawer = (NavigationView) findViewById(R.id.navigationViewDrawer);
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setupDrawerContent(navigationViewDrawer);
@@ -47,16 +50,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(mToggle.onOptionsItemSelected(item)){
+        if (mToggle.onOptionsItemSelected(item)) {
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public void selectItemDrawer(MenuItem menuItem){
+    public void selectItemDrawer(MenuItem menuItem) {
         Fragment mFragment = null;
         Class mFragmentClass;
-        switch (menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
             case R.id.dashboard:
                 mFragmentClass = Home.class;
                 break;
@@ -101,14 +104,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setupDrawerContent(NavigationView navigationView){
+    private void setupDrawerContent(NavigationView navigationView) {
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 selectItemDrawer(item);
-                return true ;
+                return true;
             }
         });
+
+
     }
-}
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        MenuItem item = menu.findItem(R.id.action_search);
+// searchView.setMenuItem(item);
+
+        return true;
+    }
+
+
+    }
+
