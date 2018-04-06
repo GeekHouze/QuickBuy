@@ -12,7 +12,8 @@
     <color name="baseReleaseColor">#212121</color>
     <color name="basePressColor">#FAFAFA</color>
     <color name="ballReleaseColor">#9E9E9E</color>
-
+    <color name="blue">#348af7</color>
+    <color name="temperature_background">@color/blue</color>
 
     <color name="White">#FFFFFF</color>
     <color name="Ivory">#FFFFF0</color>
