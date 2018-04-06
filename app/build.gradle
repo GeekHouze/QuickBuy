@@ -44,7 +44,6 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
     implementation "com.jakewharton.rxrelay2:rxrelay:$rxRelayVersion"
     implementation "com.bluelinelabs:conductor:$conductorVersion"
-    implementation "com.mikhaellopez:circularimageview:$circularimageview"
     implementation "uk.co.chrisjenx:calligraphy:$calligraphy"
     implementation "com.rengwuxian.materialedittext:library:$rengwuxian"
 
