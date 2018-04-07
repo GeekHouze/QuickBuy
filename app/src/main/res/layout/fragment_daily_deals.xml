@@ -67,7 +67,8 @@
         android:clipChildren="false"
         android:overScrollMode="never"
         app:layoutManager="com.geekhouze.qwikbuy.cards.CardSliderLayoutManager"
-        app:viewUpdater="com.geekhouze.qwikbuy.cards.CardsUpdater" />
+        app:viewUpdater="com.geekhouze.qwikbuy.cards.CardsUpdater"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <FrameLayout
         android:layout_width="match_parent"

@@ -25,8 +25,9 @@ import android.widget.ViewSwitcher;
 
 import com.geekhouze.qwikbuy.cards.SliderAdapter;
 import com.geekhouze.qwikbuy.utils.DecodeBitmapTask;
-import com.ramotion.cardslider.CardSliderLayoutManager;
-import com.ramotion.cardslider.CardSnapHelper;
+
+import com.geekhouze.qwikbuy.cards.CardSliderLayoutManager;
+import com.geekhouze.qwikbuy.cards.CardSnapHelper;
 
 import com.geekhouze.qwikbuy.R;
 
@@ -235,8 +236,8 @@ public class DailyDeals extends Fragment {
         country1TextView.setText(countries[0]);
         country2TextView.setAlpha(0f);
 
-        country1TextView.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "open-sans-extrabold.ttf"));
-        country2TextView.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "open-sans-extrabold.ttf"));
+        country1TextView.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "fonts/open-sans-extrabold.ttf"));
+        country2TextView.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "fonts/open-sans-extrabold.ttf"));
     }
 
 //    private void initGreenDot() {

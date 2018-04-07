@@ -6,8 +6,10 @@ import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
-import com.ramotion.cardslider.CardSliderLayoutManager;
-import com.ramotion.cardslider.DefaultViewUpdater;
+
+
+import com.geekhouze.qwikbuy.cards.CardSliderLayoutManager;
+import com.geekhouze.qwikbuy.cards.DefaultViewUpdater;
 
 public class CardsUpdater extends DefaultViewUpdater {
 
