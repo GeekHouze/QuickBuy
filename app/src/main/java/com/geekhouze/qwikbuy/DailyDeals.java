@@ -203,8 +203,8 @@ public class DailyDeals extends Fragment {
         clockSwitcher.setCurrentText(times[0]);
 
         descriptionsSwitcher = (TextSwitcher) getActivity().findViewById(R.id.ts_description);
-        descriptionsSwitcher.setInAnimation(this, android.R.anim.fade_in);
-        descriptionsSwitcher.setOutAnimation(this, android.R.anim.fade_out);
+        descriptionsSwitcher.setInAnimation(getActivity(), android.R.anim.fade_in);
+        descriptionsSwitcher.setOutAnimation(getActivity(), android.R.anim.fade_out);
         descriptionsSwitcher.setFactory(new TextViewFactory(R.style.DescriptionTextView, false));
         descriptionsSwitcher.setCurrentText(getString(descriptions[0]));
 
@@ -223,8 +223,8 @@ public class DailyDeals extends Fragment {
         country1TextView.setText(countries[0]);
         country2TextView.setAlpha(0f);
 
-        country1TextView.setTypeface(Typeface.createFromAsset(getAssets(), "open-sans-extrabold.ttf"));
-        country2TextView.setTypeface(Typeface.createFromAsset(getAssets(), "open-sans-extrabold.ttf"));
+        country1TextView.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "open-sans-extrabold.ttf"));
+        country2TextView.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "open-sans-extrabold.ttf"));
     }
 
 //    private void initGreenDot() {
@@ -374,9 +374,9 @@ public class DailyDeals extends Fragment {
         }
     }
 
-//    private class OnCardClickListener implements View.OnClickListener {
-//        @Override
-//        public void onClick(View view) {
+    private class OnCardClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
 //            final CardSliderLayoutManager lm =  (CardSliderLayoutManager) recyclerView.getLayoutManager();
 //
 //            if (lm.isSmoothScrolling()) {
@@ -406,8 +406,8 @@ public class DailyDeals extends Fragment {
 //                recyclerView.smoothScrollToPosition(clickedPosition);
 //                onActiveCardChange(clickedPosition);
 //            }
-//        }
-//    }
+        }
+    }
     //=========================
 
 }
