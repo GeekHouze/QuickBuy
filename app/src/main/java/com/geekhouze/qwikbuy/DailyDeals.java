@@ -28,6 +28,7 @@ import com.geekhouze.qwikbuy.utils.DecodeBitmapTask;
 import com.ramotion.cardslider.CardSliderLayoutManager;
 import com.ramotion.cardslider.CardSnapHelper;
 
+import com.geekhouze.qwikbuy.R;
 
 /**
  * A simple {@link Fragment} subclass.
