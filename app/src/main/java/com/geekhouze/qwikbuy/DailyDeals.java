@@ -30,6 +30,8 @@ import com.ramotion.cardslider.CardSnapHelper;
 
 import com.geekhouze.qwikbuy.R;
 
+import java.util.logging.Logger;
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -67,6 +69,8 @@ public class DailyDeals extends Fragment {
 
     private DecodeBitmapTask decodeMapBitmapTask;
     private DecodeBitmapTask.Listener mapLoadListener;
+
+    View rootView;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -110,17 +114,20 @@ public class DailyDeals extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        initRecyclerView();
-        initCountryText();
-        initSwitchers();
-        //initGreenDot();
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_daily_deals, container, false);
+        this.rootView = inflater.inflate(R.layout.fragment_daily_deals, container, false);
+
+        initRecyclerView();
+        initCountryText();
+        initSwitchers();
+        //initGreenDot();
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -133,6 +140,8 @@ public class DailyDeals extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+
+
 
     }
 
@@ -164,7 +173,9 @@ public class DailyDeals extends Fragment {
 
 
     private void initRecyclerView() {
-        recyclerView = (RecyclerView) getActivity().findViewById(R.id.recycler_view);
+        System.out.print("Activity name: " + getActivity());
+
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         recyclerView.setAdapter(sliderAdapter);
         recyclerView.setHasFixedSize(true);
 
@@ -191,19 +202,19 @@ public class DailyDeals extends Fragment {
 //    }
 
     private void initSwitchers() {
-        temperatureSwitcher = (TextSwitcher) getActivity().findViewById(R.id.ts_temperature);
+        temperatureSwitcher = (TextSwitcher) rootView.findViewById(R.id.ts_temperature);
         temperatureSwitcher.setFactory(new TextViewFactory(R.style.TemperatureTextView, true));
         temperatureSwitcher.setCurrentText(temperatures[0]);
 
-        placeSwitcher = (TextSwitcher) getActivity().findViewById(R.id.ts_place);
+        placeSwitcher = (TextSwitcher) rootView.findViewById(R.id.ts_place);
         placeSwitcher.setFactory(new TextViewFactory(R.style.PlaceTextView, false));
         placeSwitcher.setCurrentText(places[0]);
 
-        clockSwitcher = (TextSwitcher) getActivity().findViewById(R.id.ts_clock);
+        clockSwitcher = (TextSwitcher) rootView.findViewById(R.id.ts_clock);
         clockSwitcher.setFactory(new TextViewFactory(R.style.ClockTextView, false));
         clockSwitcher.setCurrentText(times[0]);
 
-        descriptionsSwitcher = (TextSwitcher) getActivity().findViewById(R.id.ts_description);
+        descriptionsSwitcher = (TextSwitcher) rootView.findViewById(R.id.ts_description);
         descriptionsSwitcher.setInAnimation(getActivity(), android.R.anim.fade_in);
         descriptionsSwitcher.setOutAnimation(getActivity(), android.R.anim.fade_out);
         descriptionsSwitcher.setFactory(new TextViewFactory(R.style.DescriptionTextView, false));
@@ -216,8 +227,8 @@ public class DailyDeals extends Fragment {
         countryAnimDuration = getResources().getInteger(R.integer.labels_animation_duration);
         countryOffset1 = getResources().getDimensionPixelSize(R.dimen.left_offset);
         countryOffset2 = getResources().getDimensionPixelSize(R.dimen.card_width);
-        country1TextView = (TextView) getActivity().findViewById(R.id.tv_country_1);
-        country2TextView = (TextView) getActivity().findViewById(R.id.tv_country_2);
+        country1TextView = (TextView) rootView.findViewById(R.id.tv_country_1);
+        country2TextView = (TextView) rootView.findViewById(R.id.tv_country_2);
 
         country1TextView.setX(countryOffset1);
         country2TextView.setX(countryOffset2);
