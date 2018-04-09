@@ -28,8 +28,10 @@ public class Home extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     private RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerView2;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView.Adapter mAdapter;
+    private RecyclerView.Adapter mAdapter2;
     private ArrayList<String> mDataset;
 
     View rootView;
@@ -89,6 +91,13 @@ public class Home extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new MainAdapter(mDataset);
         mRecyclerView.setAdapter(mAdapter);
+
+        mRecyclerView2 = (RecyclerView) rootView.findViewById(R.id.recycler_view2);
+        mRecyclerView2.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(rootView.getContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerView2.setLayoutManager(mLayoutManager);
+        mAdapter2 = new MainAdapter(mDataset);
+        mRecyclerView2.setAdapter(mAdapter2);
 
 
         return rootView;

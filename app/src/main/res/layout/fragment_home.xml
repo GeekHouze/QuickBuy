@@ -32,8 +32,35 @@
         android:layout_width="match_parent"/>
 
 
+    <RelativeLayout
+        android:layout_below="@id/recycler_view"
+        android:id="@+id/header2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <TextView
+            android:text="Best selling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="14dp"
+            android:text="more" />
+    </RelativeLayout>
 
 
-   
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/header2"
+        android:id="@+id/recycler_view2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+
+
+
+
 
 </RelativeLayout>
