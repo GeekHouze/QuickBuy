@@ -7,7 +7,7 @@
     tools:context="com.geekhouze.qwikbuy.MainActivity"
     android:id="@+id/drawer">
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-    </FrameLayout>
+    </RelativeLayout>
 
 
     <FrameLayout

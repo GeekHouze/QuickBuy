@@ -44,4 +44,6 @@ class  MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
             mTitle = (TextView) itemView.findViewById(R.id.title);
         }
     }
+
+
 }
