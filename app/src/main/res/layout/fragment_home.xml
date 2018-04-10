@@ -9,18 +9,22 @@
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="70dp"
+        android:padding="10dp">
         <TextView
+            android:textSize="20dp"
             android:text="Trending on Quickbuy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="14dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
             android:text="more" />
     </RelativeLayout>
 
@@ -36,18 +40,23 @@
         android:layout_below="@id/recycler_view"
         android:id="@+id/header2"
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="70dp"
+        android:padding="10dp">
+
         <TextView
+            android:textSize="20dp"
             android:text="Best selling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="14dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
             android:text="more" />
     </RelativeLayout>
 
