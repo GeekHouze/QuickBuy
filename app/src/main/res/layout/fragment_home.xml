@@ -29,6 +29,7 @@
     </RelativeLayout>
 
 
+
     <android.support.v7.widget.RecyclerView
         android:layout_below="@+id/header"
         android:id="@+id/recycler_view"
