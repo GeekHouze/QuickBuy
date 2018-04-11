@@ -115,6 +115,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        MenuItem item = menu.findItem(R.id.action_search);
+        // searchView.MenuItem(item);
+
+        return true;
+
+    }
+
 
      public void onCreateOptionMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_main,menu);
