@@ -103,6 +103,7 @@ public class CardSnapHelper extends LinearSnapHelper {
         return ((CardSliderLayoutManager)layoutManager).getTopView();
     }
 
+
     @Override
     public int[] calculateDistanceToFinalSnap(@NonNull RecyclerView.LayoutManager layoutManager,
                                               @NonNull View targetView)
