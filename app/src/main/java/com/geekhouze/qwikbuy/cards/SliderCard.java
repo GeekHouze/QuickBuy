@@ -45,6 +45,7 @@ public class SliderCard extends RecyclerView.ViewHolder implements DecodeBitmapT
         }
     }
 
+
     void clearContent() {
         if (task != null) {
             task.cancel(true);
