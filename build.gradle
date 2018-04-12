@@ -41,6 +41,7 @@ ext {
     circularimageview = '3.0.2'
     calligraphy = '2.3.0'
     rengwuxian = '2.1.4'
+    glide = '3.7.0'
 }
 
 
