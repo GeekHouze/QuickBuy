@@ -502,6 +502,7 @@ public class CardSliderLayoutManager extends RecyclerView.LayoutManager
         return updater;
     }
 
+
     private int scrollRight(int dx) {
         final int childCount = getChildCount();
 
