@@ -47,6 +47,7 @@ public class CardSnapHelper extends LinearSnapHelper {
         this.recyclerView = recyclerView;
     }
 
+
     @Override
     public int findTargetSnapPosition(RecyclerView.LayoutManager layoutManager, int velocityX, int velocityY) {
         final CardSliderLayoutManager lm = (CardSliderLayoutManager) layoutManager;
