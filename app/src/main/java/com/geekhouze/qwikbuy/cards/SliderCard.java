@@ -27,6 +27,7 @@ public class SliderCard extends RecyclerView.ViewHolder implements DecodeBitmapT
         imageView = (ImageView) itemView.findViewById(R.id.image);
     }
 
+
     void setContent(@DrawableRes final int resId) {
         if (viewWidth == 0) {
             itemView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -43,6 +44,7 @@ public class SliderCard extends RecyclerView.ViewHolder implements DecodeBitmapT
             loadBitmap(resId);
         }
     }
+
 
     void clearContent() {
         if (task != null) {

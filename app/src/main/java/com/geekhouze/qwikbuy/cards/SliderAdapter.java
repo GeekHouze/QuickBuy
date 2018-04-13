@@ -21,6 +21,7 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderCard> {
         this.listener = listener;
     }
 
+
     @Override
     public SliderCard onCreateViewHolder(ViewGroup parent, int viewType) {
         final View view = LayoutInflater
