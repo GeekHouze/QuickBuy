@@ -9,8 +9,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 import java.util.ArrayList;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
 /**
@@ -33,7 +40,7 @@ public class Home extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.Adapter mAdapter2;
     private ArrayList<String> mDataset;
-
+    private CarouselView carouselView;
     View rootView;
 
 
@@ -74,15 +81,18 @@ public class Home extends Fragment {
         }
     }
 
+
+    Integer[] images = {R.drawable.slide1, R.drawable.slide2, R.drawable.slide3};
+
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        rootView =  inflater.inflate(R.layout.fragment_home, container, false);
+        rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
         mDataset = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
-            mDataset.add("New Title # " +i);
+            mDataset.add("New Title # " + i);
         }
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
@@ -100,8 +110,15 @@ public class Home extends Fragment {
         mRecyclerView2.setAdapter(mAdapter2);
 
 
+
+   carouselView =(CarouselView) rootView.findViewById(R.id.carouselView);
+        carouselView.setPageCount(images.length);
+
+        carouselView.setImageListener(imageListener);
+
         return rootView;
-    }
+}
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -136,4 +153,13 @@ public class Home extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(images[position]);
+        }
+    };
+
 }
+

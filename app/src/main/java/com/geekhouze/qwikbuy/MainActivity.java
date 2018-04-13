@@ -6,27 +6,23 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.SearchView;
 
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
-
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
 
 
     @Override
@@ -127,11 +123,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-     public void onCreateOptionMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_main,menu);
-        MenuItem searchItem =menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView)
-                MenuItemCompat.getActionView(searchItem);
+    public void onCreateOptionMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -144,7 +139,5 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-     }
-
+    }
 }

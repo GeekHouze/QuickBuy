@@ -3,14 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Home"
     android:background="#FCFAF9">
 
+
+<LinearLayout
+    android:id="@+id/imageSlider"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+
+
+</LinearLayout>
+
+
     <RelativeLayout
+        android:layout_below="@+id/imageSlider"
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:padding="10dp">
+
+
+
         <TextView
             android:textSize="20dp"
             android:text="Trending on Quickbuy"
