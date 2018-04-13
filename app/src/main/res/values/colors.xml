@@ -16,6 +16,9 @@
     <color name="temperature_background">@color/blue</color>
     <color name="temperature_text">@android:color/white</color>
 
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+
 
     <color name="White">#FFFFFF</color>
     <color name="Ivory">#FFFFF0</color>
