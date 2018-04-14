@@ -28,6 +28,7 @@ public class SliderCard extends RecyclerView.ViewHolder implements DecodeBitmapT
     }
 
 
+
     void setContent(@DrawableRes final int resId) {
         if (viewWidth == 0) {
             itemView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
