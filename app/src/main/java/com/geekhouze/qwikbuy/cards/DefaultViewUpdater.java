@@ -28,6 +28,7 @@ public class DefaultViewUpdater implements CardSliderLayoutManager.ViewUpdater {
     private int activeCardCenter;
     private float cardsGap;
 
+
     private int transitionEnd;
     private int transitionDistance;
     private float transitionRight2Center;
