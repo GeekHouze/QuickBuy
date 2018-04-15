@@ -96,7 +96,7 @@ public class MostSelling extends Fragment {
         //Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         //((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
-        initCollapsingToolbar();
+        //initCollapsingToolbar();
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
 
@@ -212,33 +212,33 @@ public class MostSelling extends Fragment {
      * Initializing collapsing toolbar
      * Will show and hide the toolbar title on scroll
      */
-    private void initCollapsingToolbar() {
-        final CollapsingToolbarLayout collapsingToolbar =
-                (CollapsingToolbarLayout) rootView.findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle(" ");
-        AppBarLayout appBarLayout = (AppBarLayout) rootView.findViewById(R.id.appbar);
-        appBarLayout.setExpanded(true);
-
-        // hiding & showing the title when toolbar expanded & collapsed
-        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            boolean isShow = false;
-            int scrollRange = -1;
-
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if (scrollRange == -1) {
-                    scrollRange = appBarLayout.getTotalScrollRange();
-                }
-                if (scrollRange + verticalOffset == 0) {
-                    collapsingToolbar.setTitle(getString(R.string.app_name));
-                    isShow = true;
-                } else if (isShow) {
-                    collapsingToolbar.setTitle(" ");
-                    isShow = false;
-                }
-            }
-        });
-    }
+//    private void initCollapsingToolbar() {
+//        final CollapsingToolbarLayout collapsingToolbar =
+//                (CollapsingToolbarLayout) rootView.findViewById(R.id.collapsing_toolbar);
+//        collapsingToolbar.setTitle(" ");
+//        AppBarLayout appBarLayout = (AppBarLayout) rootView.findViewById(R.id.appbar);
+//        appBarLayout.setExpanded(true);
+//
+//        // hiding & showing the title when toolbar expanded & collapsed
+//        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+//            boolean isShow = false;
+//            int scrollRange = -1;
+//
+//            @Override
+//            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+//                if (scrollRange == -1) {
+//                    scrollRange = appBarLayout.getTotalScrollRange();
+//                }
+//                if (scrollRange + verticalOffset == 0) {
+//                    collapsingToolbar.setTitle(getString(R.string.app_name));
+//                    isShow = true;
+//                } else if (isShow) {
+//                    collapsingToolbar.setTitle(" ");
+//                    isShow = false;
+//                }
+//            }
+//        });
+//    }
 
     /**
      * RecyclerView item decoration - give equal margin around grid item
