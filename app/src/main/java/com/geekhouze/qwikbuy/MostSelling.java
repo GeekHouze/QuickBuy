@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -93,7 +94,7 @@ public class MostSelling extends Fragment {
 
 
         Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
         initCollapsingToolbar();
 
