@@ -1,4 +1,4 @@
-package com.delaroystudios.cardview;
+package com.geekhouze.qwikbuy.cardview;
 
 import android.content.Context;
 import android.support.v7.widget.PopupMenu;
@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+
+import com.geekhouze.qwikbuy.R;
 
 /**
  * Created by Ravi Tamada on 18/05/16.

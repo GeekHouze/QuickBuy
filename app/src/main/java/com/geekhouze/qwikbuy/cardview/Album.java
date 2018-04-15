@@ -1,4 +1,4 @@
-package com.delaroystudios.cardview;
+package com.geekhouze.qwikbuy.cardview;
 
 /**
  * Created by Lincoln on 18/05/16.
