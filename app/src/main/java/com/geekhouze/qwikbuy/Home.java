@@ -111,10 +111,10 @@ public class Home extends Fragment {
 
 
 
-   carouselView =(CarouselView) rootView.findViewById(R.id.carouselView);
-        carouselView.setPageCount(images.length);
-
-        carouselView.setImageListener(imageListener);
+//   carouselView =(CarouselView) rootView.findViewById(R.id.carouselView);
+//        carouselView.setPageCount(images.length);
+//
+//        carouselView.setImageListener(imageListener);
 
         return rootView;
 }
