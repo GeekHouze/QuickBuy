@@ -1,12 +1,23 @@
 package com.geekhouze.qwikbuy;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.app.AlertDialog;
+
+import com.rengwuxian.materialedittext.MaterialEditText;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 
 
 /**
@@ -27,7 +38,16 @@ public class Settings extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private View rootView;
+
+    Unbinder unbinder;
+
     private OnFragmentInteractionListener mListener;
+
+    @BindView(R.id.btnSignIn)
+    Button btnSignIn;
+    @BindView(R.id.btnRegister)
+    Button btnRegister;
 
     public Settings() {
         // Required empty public constructor
@@ -64,7 +84,11 @@ public class Settings extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false);
+        rootView =  inflater.inflate(R.layout.fragment_settings, container, false);
+
+        unbinder = ButterKnife.bind(this, rootView);
+
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -100,4 +124,87 @@ public class Settings extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    @OnClick({R.id.btnSignIn, R.id.btnRegister})
+    public void onButtonClicked(Button button) {
+        switch (button.getId()){
+            case R.id.btnSignIn:
+                showLoginDialog();
+                break;
+            case R.id.btnRegister:
+                showRegisterDialog();
+                break;
+            default:
+        }
+    }
+
+
+    private void showRegisterDialog() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+        dialog.setTitle("REGISTER");
+        dialog.setMessage("Please use email to register");
+
+        LayoutInflater inflater = LayoutInflater.from(getActivity());
+        View register_layout = inflater.inflate(R.layout.layout_register, null);
+
+        final MaterialEditText edtName = register_layout.findViewById(R.id.edtName);
+        final MaterialEditText edtEmail = register_layout.findViewById(R.id.edtEmail);
+        final MaterialEditText edtPassword = register_layout.findViewById(R.id.edtPassword);
+        final MaterialEditText edtPasswordSecond = register_layout.findViewById(R.id.edtPasswordSecond);
+
+        dialog.setView(register_layout);
+
+        dialog.setPositiveButton("REGISTER", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                dialogInterface.dismiss();
+
+            }
+        });
+
+        dialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+
+    private void showLoginDialog() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+        dialog.setTitle("SIGN IN");
+        dialog.setMessage("Please use email to sign in");
+
+        LayoutInflater inflater = LayoutInflater.from(getActivity());
+        View login_layout = inflater.inflate(R.layout.layout_login, null);
+
+        final MaterialEditText edtEmail = login_layout.findViewById(R.id.edtEmail);
+        final MaterialEditText edtPassword = login_layout.findViewById(R.id.edtPassword);
+
+        dialog.setView(login_layout);
+        dialog.setPositiveButton("SIGN IN", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                dialogInterface.dismiss();
+
+            }
+        });
+        dialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
+
+
+
+
 }
