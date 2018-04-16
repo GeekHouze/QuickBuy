@@ -12,7 +12,26 @@
     android:background="#FCFAF9">
 
 
+    <RelativeLayout
+        android:id="@+id/h1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="20dp">
+
+
+
+        <TextView
+            android:textSize="20dp"
+            android:text="Upcoming deals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
     <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/h1"
         android:id="@+id/recyclerView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,8 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
 
 
 

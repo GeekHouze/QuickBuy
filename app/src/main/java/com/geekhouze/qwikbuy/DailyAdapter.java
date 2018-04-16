@@ -30,8 +30,8 @@ class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(DailyAdapter.ViewHolder holder, int position) {
 
-        holder.price.setText(Integer.toString(mDataset.get(position).getThumbnail()));
-        holder.oldPrice.setText(Integer.toString(mDataset.get(position).getNumOfSongs()) );
+        holder.price.setText("R"+Integer.toString(mDataset.get(position).getThumbnail()));
+        holder.oldPrice.setText("R"+Integer.toString(mDataset.get(position).getNumOfSongs()) );
         holder.date.setText(mDataset.get(position).getName());
     }
 
