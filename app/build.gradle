@@ -60,6 +60,5 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$supportLibraryVersion" //RecyclerView
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'
     implementation 'com.synnapps:carouselview:0.1.4'
-    implementation project(':gravitysnaphelper')
 
 }

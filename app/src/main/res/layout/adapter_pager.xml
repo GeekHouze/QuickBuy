@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             >
             <TextView
-                android:id="@+id/price"
+                android:id="@+id/mprice"
                 android:text="R200"
                 android:padding="5dp"
                 android:background="@color/colorPrimary"
@@ -31,8 +31,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
-                android:id="@+id/oldPrice"
-                android:layout_below="@+id/price"
+                android:id="@+id/moldPrice"
+                android:layout_below="@+id/mprice"
                 android:text="R500"
                 android:background="@drawable/strike_through"
                 android:padding="5dp"
@@ -56,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
-                android:id="@+id/date"
+                android:id="@+id/mdate"
                 android:text="21 Mar"
                 android:textStyle="bold"
                 android:textColor="@color/white"

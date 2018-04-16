@@ -43,6 +43,7 @@ public class Home extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.Adapter mAdapter2;
+    private RecyclerView.Adapter mAdapter3;
     private ArrayList<String> mDataset;
     private CarouselView carouselView;
     View rootView;
@@ -118,9 +119,11 @@ public class Home extends Fragment {
 
 
         mRecyclerView1 = (RecyclerView) rootView.findViewById(R.id.recyclerView1);
-        mRecyclerView1.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
         mRecyclerView1.setHasFixedSize(true);
-        setupAdapter();
+        mLayoutManager = new LinearLayoutManager(rootView.getContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerView1.setLayoutManager(mLayoutManager);
+        mAdapter3 = new DailyAdapter(getAlbums());
+        mRecyclerView1.setAdapter(mAdapter3);
 
 
 
@@ -135,27 +138,7 @@ public class Home extends Fragment {
 
 
 
-    private void setupAdapter() {
-        List<Album> apps = getAlbums();
 
-        SnapAdapter snapAdapter = new SnapAdapter();
-        if (mHorizontal) {
-            snapAdapter.addSnap(new Snap(Gravity.CENTER_HORIZONTAL, "Snap center", apps));
-            snapAdapter.addSnap(new Snap(Gravity.START, "Snap start", apps));
-            snapAdapter.addSnap(new Snap(Gravity.END, "Snap end", apps));
-            snapAdapter.addSnap(new Snap(Gravity.CENTER, "GravityPager snap", apps));
-            mRecyclerView.setAdapter(snapAdapter);
-        } else {
-            Adapter adapter = new Adapter(false, false, apps);
-            mRecyclerView.setAdapter(adapter);
-            new GravitySnapHelper(Gravity.TOP, false, new GravitySnapHelper.SnapListener() {
-                @Override
-                public void onSnap(int position) {
-                    Log.d("Snapped", position + "");
-                }
-            }).attachToRecyclerView(mRecyclerView);
-        }
-    }
 
 
     private List<Album> getAlbums() {
