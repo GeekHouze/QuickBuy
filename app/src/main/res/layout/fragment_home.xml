@@ -12,14 +12,15 @@
     android:background="#FCFAF9">
 
 
-    <!--<android.support.v7.widget.RecyclerView-->
-        <!--android:id="@+id/recyclerView"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
     <RelativeLayout
+        android:layout_below="@+id/recyclerView1"
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

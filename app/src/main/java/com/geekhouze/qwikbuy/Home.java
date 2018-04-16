@@ -6,16 +6,20 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 
+import com.geekhouze.qwikbuy.cardview.Album;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -42,6 +46,9 @@ public class Home extends Fragment {
     private ArrayList<String> mDataset;
     private CarouselView carouselView;
     View rootView;
+
+    private RecyclerView mRecyclerView1;
+    private boolean mHorizontal;
 
 
     // TODO: Rename and change types of parameters
@@ -110,6 +117,13 @@ public class Home extends Fragment {
         mRecyclerView2.setAdapter(mAdapter2);
 
 
+        mRecyclerView1 = (RecyclerView) rootView.findViewById(R.id.recyclerView1);
+        mRecyclerView1.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
+        mRecyclerView1.setHasFixedSize(true);
+        setupAdapter();
+
+
+
 
 //   carouselView =(CarouselView) rootView.findViewById(R.id.carouselView);
 //        carouselView.setPageCount(images.length);
@@ -118,6 +132,44 @@ public class Home extends Fragment {
 
         return rootView;
 }
+
+
+
+    private void setupAdapter() {
+        List<Album> apps = getAlbums();
+
+        SnapAdapter snapAdapter = new SnapAdapter();
+        if (mHorizontal) {
+            snapAdapter.addSnap(new Snap(Gravity.CENTER_HORIZONTAL, "Snap center", apps));
+            snapAdapter.addSnap(new Snap(Gravity.START, "Snap start", apps));
+            snapAdapter.addSnap(new Snap(Gravity.END, "Snap end", apps));
+            snapAdapter.addSnap(new Snap(Gravity.CENTER, "GravityPager snap", apps));
+            mRecyclerView.setAdapter(snapAdapter);
+        } else {
+            Adapter adapter = new Adapter(false, false, apps);
+            mRecyclerView.setAdapter(adapter);
+            new GravitySnapHelper(Gravity.TOP, false, new GravitySnapHelper.SnapListener() {
+                @Override
+                public void onSnap(int position) {
+                    Log.d("Snapped", position + "");
+                }
+            }).attachToRecyclerView(mRecyclerView);
+        }
+    }
+
+
+    private List<Album> getAlbums() {
+        List<Album> Albums = new ArrayList<>();
+        Albums.add(new Album("12 Apr", 560, 600) );
+        Albums.add(new Album("02 Oct", 450, 670) );
+        Albums.add(new Album("22 May", 670, 700) );
+        Albums.add(new Album("09 Mar", 450, 990) );
+        Albums.add(new Album("17 Jan", 360, 490) );
+        Albums.add(new Album("11 Feb", 770, 800) );
+        Albums.add(new Album("04 Dec", 570, 960) );
+        return Albums;
+    }
+
 
 
     // TODO: Rename method, update argument and hook method into UI event
