@@ -40,6 +40,17 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setupDrawerContent(navigationViewDrawer);
 
+        Fragment mFragment=null ;
+        Class mFragmentClass;
+        mFragmentClass = Home.class;
+        try {
+            mFragment = (Fragment) mFragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flcontent, mFragment).commit();
+
 
     }
 
