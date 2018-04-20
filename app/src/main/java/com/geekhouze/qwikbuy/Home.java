@@ -48,6 +48,7 @@ public class Home extends Fragment {
     private CarouselView carouselView;
     View rootView;
 
+
     private RecyclerView mRecyclerView1;
     private boolean mHorizontal;
 
