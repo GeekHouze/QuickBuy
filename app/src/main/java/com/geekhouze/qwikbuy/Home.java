@@ -13,6 +13,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 
@@ -48,6 +49,8 @@ public class Home extends Fragment {
     private RecyclerView.Adapter mAdapter3;
     private ArrayList<String> mDataset;
     private CarouselView carouselView;
+    private Button mMore1;
+    private Button mMore2;
     View rootView;
 
     private CardView deal;
@@ -108,6 +111,25 @@ public class Home extends Fragment {
         for (int i = 0; i < 30; i++) {
             mDataset.add("New Title # " + i);
         }
+
+        mMore1 = rootView.findViewById(R.id.more1);
+        mMore2 = rootView.findViewById(R.id.more2);
+
+        mMore1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),MoreItems.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
+        mMore2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),MoreItems.class);
+                v.getContext().startActivity(intent);
+            }
+        });
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
