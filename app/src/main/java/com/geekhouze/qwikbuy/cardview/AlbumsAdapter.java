@@ -1,6 +1,7 @@
 package com.geekhouze.qwikbuy.cardview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import com.geekhouze.qwikbuy.ItemsActivity;
 import com.geekhouze.qwikbuy.R;
 
 /**
@@ -26,16 +28,25 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     private Context mContext;
     private List<Album> albumList;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView title, count;
         public ImageView thumbnail, overflow;
 
         public MyViewHolder(View view) {
             super(view);
+            view.setOnClickListener(this);
             title = (TextView) view.findViewById(R.id.title);
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
+            thumbnail.setOnClickListener(this);
             overflow = (ImageView) view.findViewById(R.id.overflow);
+        }
+
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(v.getContext(), "position = " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(v.getContext(), ItemsActivity.class);
+            v.getContext().startActivity(intent);
         }
     }
 
