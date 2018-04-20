@@ -1,19 +1,21 @@
 package com.geekhouze.qwikbuy.cards;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.annotation.DrawableRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
-
+import com.geekhouze.qwikbuy.ItemsActivity;
 import com.geekhouze.qwikbuy.R;
 import  com.geekhouze.qwikbuy.utils.DecodeBitmapTask;
 
 
-public class SliderCard extends RecyclerView.ViewHolder implements DecodeBitmapTask.Listener {
+public class SliderCard extends RecyclerView.ViewHolder implements DecodeBitmapTask.Listener, View.OnClickListener {
 
     private static int viewWidth = 0;
     private static int viewHeight = 0;
@@ -24,6 +26,7 @@ public class SliderCard extends RecyclerView.ViewHolder implements DecodeBitmapT
 
     public SliderCard(View itemView) {
         super(itemView);
+        itemView.setOnClickListener(this);
         imageView = (ImageView) itemView.findViewById(R.id.image);
     }
 
@@ -63,4 +66,10 @@ public class SliderCard extends RecyclerView.ViewHolder implements DecodeBitmapT
         imageView.setImageBitmap(bitmap);
     }
 
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(v.getContext(), "position = " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(v.getContext(), ItemsActivity.class);
+        v.getContext().startActivity(intent);
+    }
 }
