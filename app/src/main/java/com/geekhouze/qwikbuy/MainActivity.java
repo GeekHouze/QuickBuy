@@ -22,6 +22,7 @@ import android.widget.SearchView;
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
+
     private ActionBarDrawerToggle mToggle;
 
 
