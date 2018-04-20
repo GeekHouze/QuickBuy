@@ -40,7 +40,7 @@ class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>{
         return mDataset.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView price;
         public TextView oldPrice;
@@ -52,6 +52,11 @@ class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>{
             price = (TextView) itemView.findViewById(R.id.mprice);
             oldPrice = (TextView) itemView.findViewById(R.id.moldPrice);
             date = (TextView) itemView.findViewById(R.id.mdate);
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 

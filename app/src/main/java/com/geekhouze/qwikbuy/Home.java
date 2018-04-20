@@ -1,9 +1,11 @@
 package com.geekhouze.qwikbuy;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -47,6 +49,8 @@ public class Home extends Fragment {
     private ArrayList<String> mDataset;
     private CarouselView carouselView;
     View rootView;
+
+    private CardView deal;
 
 
     private RecyclerView mRecyclerView1;
@@ -126,6 +130,7 @@ public class Home extends Fragment {
         mRecyclerView1.setLayoutManager(mLayoutManager);
         mAdapter3 = new DailyAdapter(getAlbums());
         mRecyclerView1.setAdapter(mAdapter3);
+
 
 
 
