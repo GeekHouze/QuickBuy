@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.geekhouze.qwikbuy.cardview.Album;
 
@@ -49,6 +50,7 @@ class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>{
 
         public ViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             price = (TextView) itemView.findViewById(R.id.mprice);
             oldPrice = (TextView) itemView.findViewById(R.id.moldPrice);
             date = (TextView) itemView.findViewById(R.id.mdate);
@@ -56,7 +58,7 @@ class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>{
 
         @Override
         public void onClick(View v) {
-
+            Toast.makeText(v.getContext(), "position = " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
         }
     }
 
