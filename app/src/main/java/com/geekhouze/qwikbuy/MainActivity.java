@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     public void selectItemDrawer(MenuItem menuItem) {
         Fragment mFragment = null;
         Class mFragmentClass;
