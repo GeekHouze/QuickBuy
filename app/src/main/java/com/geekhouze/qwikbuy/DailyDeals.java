@@ -240,32 +240,6 @@ public class DailyDeals extends Fragment {
         country2TextView.setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "fonts/open-sans-extrabold.ttf"));
     }
 
-//    private void initGreenDot() {
-//        mapSwitcher.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//            @Override
-//            public void onGlobalLayout() {
-//                mapSwitcher.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-//
-//                final int viewLeft = mapSwitcher.getLeft();
-//                final int viewTop = mapSwitcher.getTop() + mapSwitcher.getHeight() / 3;
-//
-//                final int border = 100;
-//                final int xRange = Math.max(1, mapSwitcher.getWidth() - border * 2);
-//                final int yRange = Math.max(1, (mapSwitcher.getHeight() / 3) * 2 - border * 2);
-//
-//                final Random rnd = new Random();
-//
-//                for (int i = 0, cnt = dotCoords.length; i < cnt; i++) {
-//                    dotCoords[i][0] = viewLeft + border + rnd.nextInt(xRange);
-//                    dotCoords[i][1] = viewTop + border + rnd.nextInt(yRange);
-//                }
-//
-//                greenDot = findViewById(R.id.green_dot);
-//                greenDot.setX(dotCoords[0][0]);
-//                greenDot.setY(dotCoords[0][1]);
-//            }
-//        });
-//    }
 
     private void setCountryText(String text, boolean left2right) {
         final TextView invisibleText;
