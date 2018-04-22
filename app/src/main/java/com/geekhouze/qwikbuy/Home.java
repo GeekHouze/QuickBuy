@@ -138,20 +138,7 @@ public class Home extends Fragment {
         mAdapter = new MainAdapter(mDataset);
         mRecyclerView.setAdapter(mAdapter);
 
-        mRecyclerView2 = (RecyclerView) rootView.findViewById(R.id.recycler_view2);
-        mRecyclerView2.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(rootView.getContext(), LinearLayoutManager.HORIZONTAL, false);
-        mRecyclerView2.setLayoutManager(mLayoutManager);
-        mAdapter2 = new MainAdapter(mDataset);
-        mRecyclerView2.setAdapter(mAdapter2);
 
-
-        mRecyclerView1 = (RecyclerView) rootView.findViewById(R.id.recyclerView1);
-        mRecyclerView1.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(rootView.getContext(), LinearLayoutManager.HORIZONTAL, false);
-        mRecyclerView1.setLayoutManager(mLayoutManager);
-        mAdapter3 = new DailyAdapter(getAlbums());
-        mRecyclerView1.setAdapter(mAdapter3);
 
 
 
