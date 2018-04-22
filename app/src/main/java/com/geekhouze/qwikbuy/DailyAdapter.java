@@ -42,28 +42,7 @@ class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>{
         return mDataset.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        public TextView price;
-        public TextView oldPrice;
-        public TextView date;
-
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-            itemView.setOnClickListener(this);
-            price = (TextView) itemView.findViewById(R.id.mprice);
-            oldPrice = (TextView) itemView.findViewById(R.id.moldPrice);
-            date = (TextView) itemView.findViewById(R.id.mdate);
-        }
-
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(v.getContext(), "position = " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(v.getContext(), ItemsActivity.class);
-            v.getContext().startActivity(intent);
-        }
-    }
 
 
 }
