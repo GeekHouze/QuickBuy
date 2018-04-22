@@ -28,12 +28,6 @@ class  MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(MainAdapter.ViewHolder holder, int position) {
-        holder.mTitle.setText(mDataset.get(position));
-
-    }
-
-    @Override
     public int getItemCount() {
         return mDataset.size();
     }
@@ -58,6 +52,14 @@ class  MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
         }
     }
+
+    @Override
+    public void onBindViewHolder(MainAdapter.ViewHolder holder, int position) {
+        holder.mTitle.setText(mDataset.get(position));
+
+    }
+
+
 
 
 }

@@ -49,8 +49,6 @@ public class MoreItems extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-
     }
 
 
