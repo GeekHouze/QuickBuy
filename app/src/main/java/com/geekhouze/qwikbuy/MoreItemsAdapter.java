@@ -29,7 +29,27 @@ public class MoreItemsAdapter extends RecyclerView.Adapter<MoreItemsAdapter.MyVi
     private Context mContext;
     private List<Album> albumList;
 
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        public TextView title, count;
+        public ImageView thumbnail, overflow;
 
+        public MyViewHolder(View view) {
+            super(view);
+            view.setOnClickListener(this);
+            title = (TextView) view.findViewById(R.id.title);
+            count = (TextView) view.findViewById(R.id.count);
+            thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
+            thumbnail.setOnClickListener(this);
+            overflow = (ImageView) view.findViewById(R.id.overflow);
+        }
+
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(v.getContext(), "position = " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(v.getContext(), ItemsActivity.class);
+            v.getContext().startActivity(intent);
+        }
+    }
 
 
     public MoreItemsAdapter(Context mContext, List<Album> albumList) {
