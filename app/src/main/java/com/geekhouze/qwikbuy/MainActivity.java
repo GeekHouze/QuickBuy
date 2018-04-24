@@ -71,18 +71,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.dashboard:
                 mFragmentClass = Home.class;
                 break;
-            case R.id.mostSelling:
-                mFragmentClass = MostSelling.class;
-                break;
-            case R.id.dailyDeals:
-                mFragmentClass = DailyDeals.class;
-                break;
-            case R.id.sale:
-                mFragmentClass = Sale.class;
-                break;
-            case R.id.Orders:
-                mFragmentClass = Orders.class;
-                break;
             case R.id.wishList:
                 mFragmentClass = WishList.class;
                 break;
