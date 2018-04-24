@@ -80,6 +80,18 @@ public class MainActivity extends AppCompatActivity {
             case R.id.logout:
                 mFragmentClass = Home.class;
                 break;
+            case R.id.mostSelling:
+                mFragmentClass = MostSelling.class;
+                break;
+            case R.id.dailyDeals:
+                mFragmentClass = DailyDeals.class;
+                break;
+            case R.id.sale:
+                mFragmentClass = Sale.class;
+                break;
+            case R.id.Orders:
+                mFragmentClass = Orders.class;
+                break;
             default:
                 mFragmentClass = Home.class;
                 break;
