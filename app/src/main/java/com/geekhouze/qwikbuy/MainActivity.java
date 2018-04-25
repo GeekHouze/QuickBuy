@@ -68,7 +68,19 @@ public class MainActivity extends AppCompatActivity {
         Fragment mFragment = null;
         Class mFragmentClass;
         switch (menuItem.getItemId()) {
-
+            case R.id.dashboard:
+                mFragmentClass = Home.class;
+                break;
+            case R.id.wishList:
+                mFragmentClass = WishList.class;
+                break;
+            case R.id.settings:
+                mFragmentClass = Settings.class;
+                break;
+            case R.id.logout:
+                mFragmentClass = Home.class;
+                break;
+            case R.id.mostSelling:
                 mFragmentClass = MostSelling.class;
                 break;
             case R.id.dailyDeals:
