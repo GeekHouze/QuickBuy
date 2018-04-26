@@ -33,15 +33,7 @@ public class MoreItemsAdapter extends RecyclerView.Adapter<MoreItemsAdapter.MyVi
         public TextView title, count;
         public ImageView thumbnail, overflow;
 
-        public MyViewHolder(View view) {
-            super(view);
-            view.setOnClickListener(this);
-            title = (TextView) view.findViewById(R.id.title);
-            count = (TextView) view.findViewById(R.id.count);
-            thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
-            thumbnail.setOnClickListener(this);
-            overflow = (ImageView) view.findViewById(R.id.overflow);
-        }
+
 
         @Override
         public void onClick(View v) {
