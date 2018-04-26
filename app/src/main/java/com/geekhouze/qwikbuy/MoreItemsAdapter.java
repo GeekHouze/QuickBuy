@@ -52,10 +52,7 @@ public class MoreItemsAdapter extends RecyclerView.Adapter<MoreItemsAdapter.MyVi
     }
 
 
-    public MoreItemsAdapter(Context mContext, List<Album> albumList) {
-        this.mContext = mContext;
-        this.albumList = albumList;
-    }
+
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
