@@ -27,31 +27,13 @@ public class ItemsActivity extends AppCompatActivity {
     private ArrayList<String> mDataset;
     private CarouselView carouselView;
 
-    ImageButton fab;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items);
 
-        fab = (ImageButton) findViewById(R.id.fab);
-
-        //Outline
-        //int size = getResources().getDimensionPixelSize(R.dimen.fab_size);
-        //Outline outline = new Outline();
-        //outline.setOval(0, 0, size, size);
-        //findViewById(R.id.fab).setOutline(outline);
-
-        ViewOutlineProvider viewOutlineProvider = new ViewOutlineProvider() {
-            @Override
-            public void getOutline(View view, Outline outline) {
-                // Or read size directly from the view's width/height
-                int size = getResources().getDimensionPixelSize(R.dimen.fab_size);
-                outline.setOval(0, 0, size, size);
-            }
-        };
-
-        fab.setOutlineProvider(viewOutlineProvider);
 
 
 
