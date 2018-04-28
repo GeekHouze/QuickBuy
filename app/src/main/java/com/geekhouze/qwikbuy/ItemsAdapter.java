@@ -21,7 +21,7 @@ class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
     @Override
     public ItemsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row, parent, false);
+                .inflate(R.layout.row_item, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -33,13 +33,13 @@ class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        public TextView mTitle;
+        //public TextView mTitle;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
-            mTitle = (TextView) itemView.findViewById(R.id.title);
+           // mTitle = (TextView) itemView.findViewById(R.id.title);
 
         }
 
@@ -54,7 +54,7 @@ class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ItemsAdapter.ViewHolder holder, int position) {
-        holder.mTitle.setText(mDataset.get(position));
+        //holder.mTitle.setText(mDataset.get(position));
 
     }
 
