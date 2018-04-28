@@ -46,16 +46,22 @@
             android:textStyle="bold"
             android:layout_height="wrap_content" />
 
-        <Button
+        <ImageButton
+            android:id="@+id/fab"
             android:layout_below="@+id/title"
             android:layout_alignParentRight="true"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/round_button"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="hello"
-            android:layout_marginRight="10dp"
-            android:textColor="#fff" />
+            android:layout_alignParentBottom="true"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/fab_size"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ripple"
+            android:stateListAnimator="@drawable/anim"
+            android:src="@drawable/ic_add_shopping_cart_black_24dp"
+            android:elevation="4dp"
+            />
+
 
 
     </RelativeLayout>
