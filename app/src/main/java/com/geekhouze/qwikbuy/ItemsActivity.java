@@ -27,7 +27,12 @@ public class ItemsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items);
 
-        mRecyclerView2 = (RecyclerView) findViewById(R.id.recycler_view2);
+        mDataset = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            mDataset.add("New Title # " + i);
+        }
+
+        mRecyclerView2 = (RecyclerView) findViewById(R.id.items_recyclerview);
         mRecyclerView2.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView2.setLayoutManager(mLayoutManager);
