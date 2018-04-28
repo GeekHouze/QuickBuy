@@ -49,6 +49,7 @@
 
 
         <RelativeLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/title">
@@ -57,7 +58,7 @@
             android:id="@+id/line"
             android:background="@color/colorPrimary"
             android:layout_width = "match_parent"
-            android:layout_height="0.1dp"/>
+            android:layout_height="0.2dp"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/cart"
@@ -69,6 +70,17 @@
             app:backgroundTint="@color/colorPrimary"
             android:backgroundTint="@color/colorPrimary"/>
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/price"
+            android:text="R 683"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="-30dp"
+            android:layout_below="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </RelativeLayout>
 
