@@ -36,7 +36,7 @@ public class ItemsActivity extends AppCompatActivity {
         mRecyclerView2.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView2.setLayoutManager(mLayoutManager);
-        mAdapter2 = new MainAdapter(mDataset);
+        mAdapter2 = new ItemsAdapter(mDataset);
         mRecyclerView2.setAdapter(mAdapter2);
 
     }
