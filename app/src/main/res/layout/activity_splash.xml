@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/input_field"
             android:gravity="left"
-            android:src="@drawable/icon"
+            android:src="@drawable/logo"
             android:text="Left Aligned"/>
 
     </LinearLayout>
