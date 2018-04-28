@@ -3,7 +3,7 @@
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_margin="10dp"
+        android:layout_marginRight="10dp"
     android:background="@drawable/background_border"
         android:orientation="vertical"
         android:layout_width="70dp"
