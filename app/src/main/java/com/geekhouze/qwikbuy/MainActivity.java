@@ -1,20 +1,16 @@
 package com.geekhouze.qwikbuy;
 
-import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.SearchView;
 
 
@@ -41,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setupDrawerContent(navigationViewDrawer);
 
+
         Fragment mFragment=null ;
         Class mFragmentClass;
         mFragmentClass = Home.class;
@@ -55,17 +52,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+       @Override
+       public boolean onOptionsItemSelected(MenuItem item) {
+           if (mToggle.onOptionsItemSelected(item)) {
+               return true;
+           }
+           return super.onOptionsItemSelected(item);
+       }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (mToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
-
-    public void selectItemDrawer(MenuItem menuItem) {
+       public void selectItemDrawer(MenuItem menuItem) {
         Fragment mFragment = null;
         Class mFragmentClass;
         switch (menuItem.getItemId()) {
@@ -158,5 +154,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     }
