@@ -63,14 +63,7 @@
                 android:layout_marginLeft="20dp"
                 android:gravity="center_vertical"
                 android:layout_height="match_parent" />
-            <TextView
-                android:text="v0.1"
-                android:textColor="#BEBEBE"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical|right"
-                android:layout_marginRight="20dp"
-                android:layout_height="match_parent" />
+
         </LinearLayout>
 
     </android.support.design.widget.NavigationView>
