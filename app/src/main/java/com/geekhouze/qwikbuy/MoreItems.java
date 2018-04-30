@@ -8,6 +8,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -28,6 +29,9 @@ public class MoreItems extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_items);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -50,6 +54,7 @@ public class MoreItems extends AppCompatActivity {
         }
 
     }
+
 
 
     //===============================
@@ -184,5 +189,14 @@ public class MoreItems extends AppCompatActivity {
     }
 
     //===============================
+
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        int id =item.getItemId();
+
+        if(id ==android.R.id.home)
+        this.finish();
+        return super.onOptionsItemSelected(item);
+    }
 
 }
