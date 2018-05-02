@@ -107,7 +107,10 @@ public class Home extends Fragment {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-
+        mDataset = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            mDataset.add("New Title # " + i);
+        }
 
         mMore1 = rootView.findViewById(R.id.more1);
         mMore2 = rootView.findViewById(R.id.more2);
