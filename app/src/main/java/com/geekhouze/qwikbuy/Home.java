@@ -112,7 +112,16 @@ public class Home extends Fragment {
             mDataset.add("New Title # " + i);
         }
 
+        mMore1 = rootView.findViewById(R.id.more1);
+        mMore2 = rootView.findViewById(R.id.more2);
 
+        mMore1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),MoreItems.class);
+                v.getContext().startActivity(intent);
+            }
+        });
 
         mMore2.setOnClickListener(new View.OnClickListener() {
             @Override
