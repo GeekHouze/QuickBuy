@@ -51,6 +51,7 @@ class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
             //Intent intent = new Intent(v.getContext(), ItemsActivity.class);
             //v.getContext().startActivity(intent);
 
+
         }
     }
 
