@@ -16,6 +16,7 @@ class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
 
     public ItemsAdapter(ArrayList<String> mDataset) {
         this.mDataset = mDataset;
+
     }
 
     @Override
