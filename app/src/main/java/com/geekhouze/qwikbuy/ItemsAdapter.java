@@ -45,6 +45,8 @@ class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
 
         }
 
+
+
         @Override
         public void onClick(View v) {
             Toast.makeText(v.getContext(), "position = " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
