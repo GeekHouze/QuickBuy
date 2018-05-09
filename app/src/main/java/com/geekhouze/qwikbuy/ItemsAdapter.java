@@ -28,7 +28,34 @@ class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
     }
 
 
+    @Override
+    public int getItemCount() {
+        return mDataset.size();
+    }
 
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+        //public TextView mTitle;
+
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            itemView.setOnClickListener(this);
+           // mTitle = (TextView) itemView.findViewById(R.id.title);
+
+        }
+
+
+
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(v.getContext(), "position = " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
+            //Intent intent = new Intent(v.getContext(), ItemsActivity.class);
+            //v.getContext().startActivity(intent);
+
+
+        }
+    }
 
     @Override
     public void onBindViewHolder(ItemsAdapter.ViewHolder holder, int position) {
