@@ -12,20 +12,7 @@ import java.util.ArrayList;
 
 class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
 
-    private ArrayList<String> mDataset;
 
-    public ItemsAdapter(ArrayList<String> mDataset) {
-        this.mDataset = mDataset;
-
-    }
-
-    @Override
-    public ItemsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_item, parent, false);
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
-    }
 
 
     @Override
