@@ -213,12 +213,7 @@ public class Home extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    ImageListener imageListener = new ImageListener() {
-        @Override
-        public void setImageForPosition(int position, ImageView imageView) {
-            imageView.setImageResource(images[position]);
-        }
-    };
+
 
 }
 
