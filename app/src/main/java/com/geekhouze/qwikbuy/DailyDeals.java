@@ -118,18 +118,7 @@ public class DailyDeals extends Fragment {
 
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        this.rootView = inflater.inflate(R.layout.fragment_daily_deals, container, false);
 
-        initRecyclerView();
-        initCountryText();
-        initSwitchers();
-        //initGreenDot();
-        return rootView;
-    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
