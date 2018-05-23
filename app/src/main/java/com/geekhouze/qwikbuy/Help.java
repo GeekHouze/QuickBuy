@@ -15,6 +15,16 @@ public class Help extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
 
+    private String mParam1;
+
+    private String mParam2;
+
+    private WishList.OnFragmentInteractionListener mListener;
+
+
+    public Help() {
+
+    }
 
     public static Help newInstance(String param1, String param2) {
         Help fragment = new Help();
