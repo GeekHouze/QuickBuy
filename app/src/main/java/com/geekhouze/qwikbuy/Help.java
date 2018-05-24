@@ -22,10 +22,6 @@ public class Help extends Fragment {
     private WishList.OnFragmentInteractionListener mListener;
 
 
-    public Help() {
-
-    }
-
     public static Help newInstance(String param1, String param2) {
         Help fragment = new Help();
         Bundle args = new Bundle();
