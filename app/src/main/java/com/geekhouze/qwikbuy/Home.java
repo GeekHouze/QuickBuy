@@ -165,6 +165,17 @@ public class Home extends Fragment {
 
 
 
+    private List<Album> getAlbums() {
+        List<Album> Albums = new ArrayList<>();
+        Albums.add(new Album("12 Apr", 560, 600) );
+        Albums.add(new Album("02 Oct", 450, 670) );
+        Albums.add(new Album("22 May", 670, 700) );
+        Albums.add(new Album("09 Mar", 450, 990) );
+        Albums.add(new Album("17 Jan", 360, 490) );
+        Albums.add(new Album("11 Feb", 770, 800) );
+        Albums.add(new Album("04 Dec", 570, 960) );
+        return Albums;
+    }
 
 
 
