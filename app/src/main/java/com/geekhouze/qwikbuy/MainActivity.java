@@ -87,9 +87,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.sale:
                 mFragmentClass = Sale.class;
                 break;
-            case R.id.help:
-                mFragmentClass = Help.class;
-                break;
             case R.id.Orders:
                 mFragmentClass = Orders.class;
                 break;
