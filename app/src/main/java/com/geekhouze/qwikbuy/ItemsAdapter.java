@@ -27,7 +27,6 @@ class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
         return vh;
     }
 
-
     @Override
     public int getItemCount() {
         return mDataset.size();
