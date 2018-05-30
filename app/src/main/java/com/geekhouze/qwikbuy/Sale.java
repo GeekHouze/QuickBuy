@@ -75,6 +75,11 @@ public class Sale extends Fragment {
     }
 
 
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
 
     /**
      * This interface must be implemented by activities that contain this
