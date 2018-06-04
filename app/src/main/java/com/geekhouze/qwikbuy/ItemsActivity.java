@@ -30,38 +30,5 @@ public class ItemsActivity extends AppCompatActivity {
 
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_items);
-
-      getSupportActionBar().setDisplayShowHomeEnabled(true);
-     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        mDataset = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
-            mDataset.add("New Title # " + i);
-        }
-
-        mRecyclerView2 = (RecyclerView) findViewById(R.id.items_recyclerview);
-        mRecyclerView2.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        mRecyclerView2.setLayoutManager(mLayoutManager);
-        mAdapter2 = new ItemsAdapter(mDataset);
-        mRecyclerView2.setAdapter(mAdapter2);
-
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item){
-
-        int id =item.getItemId();
-
-        if(id == android.R.id.home){
-            //
-            this.finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 
 }
