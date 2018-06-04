@@ -38,7 +38,10 @@ public class ItemsActivity extends AppCompatActivity {
       getSupportActionBar().setDisplayShowHomeEnabled(true);
      getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        mDataset = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            mDataset.add("New Title # " + i);
+        }
 
 
 
