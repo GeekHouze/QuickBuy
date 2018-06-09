@@ -51,7 +51,7 @@
     </style>
 
     <style name="TabLayout_Theme" parent="@style/AppTheme">
-        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
         <item name="android:layout_marginRight">0dp</item>
     </style>
 
