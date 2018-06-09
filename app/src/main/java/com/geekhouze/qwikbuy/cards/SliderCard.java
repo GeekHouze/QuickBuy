@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
-import com.geekhouze.qwikbuy.ItemsActivity;
+import com.geekhouze.qwikbuy.item.ItemsActivity;
 import com.geekhouze.qwikbuy.R;
 import  com.geekhouze.qwikbuy.utils.DecodeBitmapTask;
 

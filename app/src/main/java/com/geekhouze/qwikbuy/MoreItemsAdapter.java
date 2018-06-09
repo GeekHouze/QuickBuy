@@ -17,8 +17,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import com.geekhouze.qwikbuy.ItemsActivity;
-import com.geekhouze.qwikbuy.R;
+import com.geekhouze.qwikbuy.item.ItemsActivity;
 import com.geekhouze.qwikbuy.cardview.Album;
 
 /**

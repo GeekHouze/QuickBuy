@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
+public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
 
     private ArrayList<String> mDataset;
 

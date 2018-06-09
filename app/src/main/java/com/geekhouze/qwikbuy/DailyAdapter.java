@@ -9,8 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.geekhouze.qwikbuy.cardview.Album;
+import com.geekhouze.qwikbuy.item.ItemsActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.ViewHolder>{
