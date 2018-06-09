@@ -131,8 +131,8 @@
         android:background="@color/DarkOrange"/>
 
     <android.support.v4.view.ViewPager
-        android:layout_below="@+id/itemTabLayout_id"
         android:id="@+id/itemViewPager_id"
+        android:layout_below="@+id/itemTabLayout_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
