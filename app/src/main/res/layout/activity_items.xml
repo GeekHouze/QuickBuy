@@ -123,9 +123,8 @@
         android:id="@+id/itemTabLayout_id"
         android:layout_below="@+id/itemTopSection"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:tabGravity="fill"
-        app:tabMode="fixed"
+        android:layout_width="match_parent"
+        app:tabMode="scrollable"
         app:tabTextColor="@color/darkgrey"
         app:tabIndicatorColor="@color/tabIndicatorColor"/>
 
@@ -134,7 +133,6 @@
         android:layout_below="@+id/itemTabLayout_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
 
 </RelativeLayout>
 

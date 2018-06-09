@@ -50,5 +50,9 @@
         <item name="android:ellipsize">end</item>
     </style>
 
+    <style name="TabLayout_Theme" parent="@style/AppTheme">
+        <item name="android:singleLine">true</item>
+    </style>
+
 
 </resources>
