@@ -22,7 +22,18 @@
         android:layout_height="200dp"
         android:layout_marginBottom="5dp"/>
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_share_black_24dp"
+        android:layout_margin="16dp"
+        app:backgroundTint="#BDBDBD"
+        android:backgroundTint="#BDBDBD"/>
+
     <RelativeLayout
+        android:id="@+id/itemTopSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/item"
@@ -97,7 +108,6 @@
             android:layout_height="wrap_content" />
 
         <TextView
-
             android:layout_toRightOf="@+id/price"
             android:layout_marginLeft="10dp"
             android:text="20% OFF"
@@ -109,15 +119,17 @@
 
     </RelativeLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/itemTabLayout_id"
+        android:layout_below="@+id/itemTopSection"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:src="@drawable/ic_share_black_24dp"
-        android:layout_margin="16dp"
-        app:backgroundTint="#BDBDBD"
-        android:backgroundTint="#BDBDBD"/>
+        android:layout_width="match_parent"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/tabTextColor"
+        app:tabIndicatorColor="@color/tabIndicatorColor"
+        android:background="@color/DarkOrange"/>
+
 
 
 
