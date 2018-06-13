@@ -55,6 +55,9 @@ public class ItemsActivity extends AppCompatActivity {
 
 
 
+        // Adapter Setup
+        itemViewPager.setAdapter(itemViewPagerAdapter);
+        itemTabLayout.setupWithViewPager(itemViewPager);
 
 
     }
