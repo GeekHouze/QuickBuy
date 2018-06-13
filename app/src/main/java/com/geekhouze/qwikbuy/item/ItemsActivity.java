@@ -54,6 +54,11 @@ public class ItemsActivity extends AppCompatActivity {
 
 
 
+        // Add Fragments to the ItemViewPager
+        ItemViewPagerAdapter itemViewPagerAdapter = new ItemViewPagerAdapter(getSupportFragmentManager());
+        itemViewPagerAdapter.addFragment(new FragmentItemDescription(), "Description");
+        itemViewPagerAdapter.addFragment(new FragmentItemInfo(), "Info");
+        itemViewPagerAdapter.addFragment(new FragmentItemReviews(), "Reviews");
 
         // Adapter Setup
         itemViewPager.setAdapter(itemViewPagerAdapter);
