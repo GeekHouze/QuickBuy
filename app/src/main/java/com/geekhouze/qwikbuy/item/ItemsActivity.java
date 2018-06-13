@@ -52,7 +52,12 @@ public class ItemsActivity extends AppCompatActivity {
         itemViewPager = (ViewPager) findViewById(R.id.itemViewPager_id);
 
 
-
+        mRecyclerView2 = (RecyclerView) findViewById(R.id.items_recyclerview);
+        mRecyclerView2.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerView2.setLayoutManager(mLayoutManager);
+        mAdapter2 = new ItemsAdapter(mDataset);
+        mRecyclerView2.setAdapter(mAdapter2);
 
         // Add Fragments to the ItemViewPager
         ItemViewPagerAdapter itemViewPagerAdapter = new ItemViewPagerAdapter(getSupportFragmentManager());
