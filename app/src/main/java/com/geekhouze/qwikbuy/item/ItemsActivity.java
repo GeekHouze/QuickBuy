@@ -51,6 +51,10 @@ public class ItemsActivity extends AppCompatActivity {
         itemTabLayout = (TabLayout) findViewById(R.id.itemTabLayout_id);
         itemViewPager = (ViewPager) findViewById(R.id.itemViewPager_id);
 
+        mDataset = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            mDataset.add("New Title # " + i);
+        }
 
         mRecyclerView2 = (RecyclerView) findViewById(R.id.items_recyclerview);
         mRecyclerView2.setHasFixedSize(true);
